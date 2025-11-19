@@ -1,1 +1,1 @@
-my website thingy
+website thingy
