@@ -8,7 +8,7 @@
 export const site = {
   name: {
     first: "Ethan",
-    last: null, // Optional. null shows just "Ethan"; add a surname or initial (e.g. "M.") to show it.
+    last: "M.", // Shown as "Ethan M." Use null for just "Ethan".
   },
 
   // The three parts of your headline, shown in order under your name.
@@ -19,7 +19,7 @@ export const site = {
   ],
 
   intro:
-    "Final-year cyber security student at Sheffield Hallam University. I learn by building things: packet sniffers, intrusion detection labs, a self-hosted server, and the odd tool for the games I play.",
+    "Final-year cyber security student at Sheffield Hallam University. I learn by building things: a packet sniffer, a file transfer protocol, and intrusion detection rules for real attack traffic.",
 
   location: "United Kingdom",
 
@@ -43,7 +43,7 @@ export const site = {
     bio: [
       "I'm in my final year of a BSc (Hons) in Cyber Security at Sheffield Hallam University. Most of my practical experience comes from coursework labs and from projects I've built at home.",
       "The part of security that holds my attention most is the network: reading packet captures, tuning intrusion detection, and following an attack from the first scan to the last connection. I like tools that make that easier to see, which is why a few of my projects are monitors and sniffers.",
-      "Outside the network, I write software for fun. Some of it is security tooling, some of it is for osu!, and some of it is simply me wanting to understand how a protocol works by writing my own.",
+      "Outside coursework, I write software for fun. Some of it is security tooling, and some of it is simply me wanting to understand how a protocol works by writing my own.",
     ],
 
     // How you approach learning. Shown as a short list.

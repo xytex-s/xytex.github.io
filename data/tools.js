@@ -16,47 +16,36 @@
  */
 export const tools = [
   {
-    id: "packet-sniffer",
-    name: "Network Packet Sniffer",
+    id: "nettrace",
+    name: "NetTrace",
     icon: null,
-    glyph: "ps",
-    description: "Captures packets from a network interface and breaks them down by protocol.",
+    glyph: "nt",
+    description: "Packet sniffer for Windows and Linux. Captures from a chosen interface, filters by protocol, port or IP, and saves PCAP files.",
     purpose:
       "Seeing exactly what crosses the wire, without the abstraction of a full analyser, to understand packet structure and spot unusual traffic.",
-    tech: [], // PLACEHOLDER
-    status: "in-progress", // CHECK
-    links: { repo: null, docs: null },
+    tech: ["Python", "Raw sockets", "PCAP", "Tkinter"],
+    status: "completed",
+    links: { repo: "https://github.com/xytex-s/NetTrace", docs: "https://github.com/xytex-s/NetTrace/blob/main/GUI_USAGE.md" },
   },
   {
-    id: "osu-tracker",
-    name: "osu! Performance Tracker",
+    id: "pyftpx",
+    name: "PyFTPX",
     icon: null,
-    glyph: "os",
-    description: "Reads live gameplay data from tosu over WebSockets and shows performance stats in real time.",
+    glyph: "fx",
+    description: "Experimental file transfer protocol over UDP, with a command-line sender and receiver.",
     purpose:
-      "Tracking performance during play rather than after it, and a practical way to work with real-time data streams.",
-    tech: ["tosu API", "WebSockets"],
-    status: "in-progress", // CHECK
-    links: { repo: null, docs: null },
-  },
-  {
-    id: "null-overlay",
-    name: "Null Overlay",
-    icon: null,
-    glyph: "nl",
-    description: "A minimal custom overlay for osu!, built on tosu, with a monospace, colourless design.",
-    purpose: "A stream and gameplay overlay that shows what matters and nothing else.",
-    tech: ["tosu API", "JavaScript", "HTML", "CSS"], // CHECK
+      "Understanding what TCP does for you by rebuilding reliability (ordering, acknowledgements, retransmission and integrity checks) on top of UDP.",
+    tech: ["Python", "UDP", "pytest"],
     status: "in-progress",
-    links: { repo: null, docs: null },
+    links: { repo: "https://github.com/xytex-s/PyFTPX", docs: "https://github.com/xytex-s/PyFTPX/blob/main/docs/protocol-spec.md" },
   },
   {
     id: "next-utility",
-    name: "Next security utility",
+    name: "Security tool suite",
     icon: null,
     glyph: "+",
-    description: "Space for the next tool. Replace this entry when you start building it.",
-    purpose: "", // e.g. "Automate first-pass triage of Zeek logs."
+    description: "In planning: a set of security tools. Details to follow once the direction is settled.",
+    purpose: "",
     tech: [],
     status: "planned",
     links: { repo: null, docs: null },

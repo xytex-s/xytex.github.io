@@ -20,15 +20,15 @@ export const skills = [
   },
   {
     group: "Networking",
-    items: ["TCP/IP", "DNS", "DHCP", "Wireshark", "Nmap"],
+    items: ["TCP/IP", "DNS", "DHCP", "OSPF", "VLANs", "ACLs", "Wireshark", "Nmap"],
   },
   {
     group: "Security tools",
-    items: ["Security Onion", "Suricata", "Zeek", "Burp Suite", "Metasploit", "Kali Linux"],
+    items: ["Security Onion", "Suricata", "Zeek", "NetworkMiner", "Nikto", "John the Ripper", "Burp Suite", "Metasploit", "Kali Linux"],
   },
   {
     group: "Programming and development",
-    items: ["Python", "JavaScript", "HTML", "CSS", "SQL", "Git", "GitHub"],
+    items: ["Python", "Flask", "JavaScript", "HTML", "CSS", "SQL", "Git", "GitHub"],
   },
   {
     group: "Systems and cloud",
@@ -37,6 +37,7 @@ export const skills = [
       "Windows",
       "Virtualisation",
       "Microsoft Azure",
+      "Docker",
       "Raspberry Pi",
       "Self-hosted services",
     ],

@@ -33,10 +33,10 @@ export function renderContact(root, { contact, socialLinks }) {
             type: "button",
             class: "btn btn--outline btn--sm",
             onclick: async (e) => {
+              const btn = e.currentTarget; // read before await: currentTarget is null afterwards
               const ok = await copyText(email);
               toast(ok ? "Email address copied" : "Couldn't copy. Select the address and copy it manually.");
               if (ok) {
-                const btn = e.currentTarget;
                 btn.replaceChildren(svg(icon("check")), "Copied");
                 setTimeout(() => btn.replaceChildren(svg(icon("copy")), "Copy email"), 2000);
               }

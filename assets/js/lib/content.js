@@ -38,6 +38,7 @@ export function placeholder(text, field) {
  * kind: "repo" | "demo" | "docs" | "doc"
  */
 export function linkButton({ url, label, iconName = "external", field, small = false }) {
+  if (url === false) return null; // false means "no link, on purpose": show nothing
   const href = safeUrl(url);
   if (!href) {
     return h(

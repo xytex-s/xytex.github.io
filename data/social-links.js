@@ -9,14 +9,14 @@
  * HTML, which stops the simplest scrapers from harvesting it.
  */
 export const contact = {
-  email: null, // PLACEHOLDER: e.g. "ethan.surname.dev@gmail.com"
+  email: "ethan@ethan-m.dev",
   message:
     "I'm looking for graduate roles in cyber security starting in 2027. If you're hiring, running a project I could help with, or just want to talk about network security, email me. I usually reply within a couple of days.",
 };
 
 export const socialLinks = [
-  { label: "GitHub", icon: "github", url: null, handle: null }, // PLACEHOLDER
-  { label: "LinkedIn", icon: "linkedin", url: null, handle: null }, // PLACEHOLDER
+  { label: "GitHub", icon: "github", url: "https://github.com/xytex-s", handle: "xytex-s" },
+  { label: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/ethan-mckay-82656b332/", handle: null },
   // Optional extras. Delete any you don't use.
   { label: "TryHackMe", icon: "tryhackme", url: null, handle: null, optional: true },
 ];

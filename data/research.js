@@ -21,25 +21,6 @@
  */
 export const research = [
   {
-    id: "dfir-pcap-investigation",
-    title: "Multi-sensor PCAP investigation of a staged attack chain",
-    type: "Write-up",
-    context: "Ethical Hacking and Intrusion Detection module",
-    year: "2026", // CHECK
-    status: "completed",
-    group: false,
-    overview:
-      "A 2,000-word digital forensics and incident response report analysing packet captures from several network sensors. The investigation traced an attack from TCP SYN reconnaissance, through DarkGate command-and-control traffic, to Log4Shell exploitation and IoT botnet activity.",
-    outcomes: [
-      "Correlated alerts and logs across multiple sensors to build one timeline",
-      "Separated reconnaissance, C2 and exploitation traffic in a large capture",
-      "Wrote findings up as a structured incident report",
-    ],
-    tech: ["Security Onion", "Suricata", "Zeek", "NetworkMiner", "Wireshark"],
-    images: [],
-    links: [{ label: "Summary or report", url: null }],
-  },
-  {
     id: "softcorp-pen-test",
     title: "Web server penetration test",
     type: "Assignment",
@@ -48,26 +29,34 @@ export const research = [
     status: "in-progress",
     group: true,
     overview:
-      "A group penetration test of a scenario company's web server, written up as a professional test report with findings and remediation advice.",
-    outcomes: [], // Add once submitted
-    tech: [], // PLACEHOLDER
+      "A group penetration test of a scenario company's Linux web server, from host discovery and service enumeration through web vulnerability scanning to password-hash cracking, written up as a professional test report with findings and remediation advice.",
+    outcomes: [
+      "Choosing and justifying tools and techniques to assess the security of a web server and its applications",
+      "Applying a risk assessment method to rate and prioritise findings",
+      "Combining results from several tools into one assessment with remediation advice",
+    ],
+    tech: ["Kali Linux", "Nmap", "Nikto", "John the Ripper"],
     images: [],
-    links: [{ label: "Report summary", url: null }],
+    links: [],
   },
   {
     id: "isms-risk-assessment",
     title: "ISMS and risk assessment",
     type: "Assignment",
     context: "Information Security Management module",
-    year: "2026", // CHECK
+    year: "2027",
     status: "in-progress",
     group: true,
     overview:
-      "Group coursework designing an information security management system and risk assessment for a scenario organisation, presented to the module team.",
-    outcomes: [],
-    tech: ["NIST"], // CHECK: the framework your group used
+      "Group coursework designing an information security management system and risk register for a scenario insurance company with UK and US offices. The ISMS is structured on NIST CSF 2.0, with risks assessed using SP 800-30, systems categorised with FIPS 199, and controls drawn from SP 800-53, delivered as a recorded presentation.",
+    outcomes: [
+      "Planning a standards-based ISMS (NIST CSF 2.0) for organisational resilience",
+      "Selecting and adapting a risk assessment method (NIST SP 800-30) to the organisation's UK and US obligations",
+      "Evaluating security frameworks as a team, including why NIST was chosen over ISO 27001",
+    ],
+    tech: ["NIST CSF 2.0", "NIST SP 800-30", "NIST SP 800-53", "FIPS 199"],
     images: [],
-    links: [{ label: "Slides", url: null }],
+    links: [],
   },
   {
     id: "final-year-project",
@@ -82,6 +71,6 @@ export const research = [
     outcomes: [],
     tech: ["Python", "Ollama"], // CHECK
     images: [],
-    links: [{ label: "Project repository", url: null }],
+    links: [],
   },
 ];

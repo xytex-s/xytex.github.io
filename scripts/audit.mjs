@@ -48,7 +48,7 @@ for (const p of projects) {
   ids.add(p.id);
   for (const c of p.categories) if (!cats.has(c)) add("projects.js", at, `unknown category "${c}"`);
   if (!["completed", "in-progress", "planned"].includes(p.status)) add("projects.js", at, `unknown status "${p.status}"`);
-  if (missing(p.tech)) add("projects.js", `${at}.tech`, "technologies");
+  if (missing(p.tech) && p.status !== "planned") add("projects.js", `${at}.tech`, "technologies");
   if (missing(p.links?.repo)) add("projects.js", `${at}.links.repo`, "GitHub link");
   if (missing(p.image)) add("projects.js", `${at}.image`, "screenshot (optional)");
   if ((p.description || []).filter(Boolean).length < 2) add("projects.js", `${at}.description`, "full write-up");

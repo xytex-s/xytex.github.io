@@ -89,7 +89,7 @@ export function renderProjects(root, { projects, categories }) {
             h("div", { class: "project__top" }, h("span", { class: "project__cat" }, label[p.categories[0]]), statusBadge(p.status)),
             h("h3", { class: "project__title", id: `p-${p.id}` }, p.title),
             h("p", { class: "project__summary" }, p.summary),
-            techList(p.tech, `${p.id}.tech`),
+            p.status === "planned" && !(p.tech || []).length ? null : techList(p.tech, `${p.id}.tech`),
             h(
               "div",
               { class: "project__actions" },
@@ -170,8 +170,8 @@ export function renderProjects(root, { projects, categories }) {
           h("h2", { id: "pd-title", class: "pd__title" }, p.title),
           h("div", { class: "prose" }, desc.map((d) => h("p", {}, d)), desc.length < 2 ? h("p", {}, placeholder("Full write-up to add", `${p.id}.description`)) : null),
           p.highlights && p.highlights.length ? [h("h3", {}, "Highlights"), h("ul", { class: "approach" }, p.highlights.map((x) => h("li", {}, x)))] : null,
-          h("h3", {}, "Built with"),
-          techList(p.tech, `${p.id}.tech`),
+          p.outcomes && p.outcomes.length ? [h("h3", {}, "Learning outcomes"), h("ul", { class: "approach" }, p.outcomes.map((x) => h("li", {}, x)))] : null,
+          p.status === "planned" && !(p.tech || []).length ? null : [h("h3", {}, "Built with"), techList(p.tech, `${p.id}.tech`)],
           h(
             "div",
             { class: "project__actions" },
