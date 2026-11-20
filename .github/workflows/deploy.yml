@@ -1,0 +1,48 @@
+# Deploys the site to GitHub Pages on every push to main.
+# One-time setup: repository Settings > Pages > Build and deployment >
+# Source: "GitHub Actions".
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # Fails the deploy if a data file has a syntax error. Placeholders are
+      # reported as warnings only, so you can publish before filling them all in.
+      - run: node scripts/audit.mjs
+
+  deploy:
+    needs: check
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+          # Needed so .nojekyll and .well-known/security.txt are published.
+          # (.git and .github are still left out.)
+          include-hidden-files: true
+      - id: deployment
+        uses: actions/deploy-pages@v4

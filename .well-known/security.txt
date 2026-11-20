@@ -1,0 +1,7 @@
+# Security contact for this site (RFC 9116). Fitting for a security portfolio:
+# it tells anyone who finds a problem how to reach you.
+# EDIT: replace the email, and update Expires at least once a year.
+Canonical: https://ethan-m.dev/.well-known/security.txt
+Contact: mailto:your.email@example.com
+Expires: 2027-11-30T00:00:00.000Z
+Preferred-Languages: en
