@@ -1,0 +1,12 @@
+{
+  "name": "Ethan | Cyber Security Portfolio",
+  "short_name": "Portfolio",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#0a1322",
+  "theme_color": "#0a1322",
+  "icons": [
+    { "src": "favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "assets/img/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Page not found</title>
+    <!--
+      GitHub Pages serves this file for any missing URL, from any depth, so it
+      is self-contained: styles are inline and the favicon is embedded.
+      EDIT: if your site lives at https://username.github.io/REPO-NAME/,
+      change both href="/" values below to "/REPO-NAME/".
+    -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1322'/%3E%3Crect x='7' y='7' width='50' height='50' rx='9' fill='none' stroke='%235ad7e3' stroke-width='3'/%3E%3Cpath d='M23 20h18M23 32h14M23 44h18M23 20v24' fill='none' stroke='%235ad7e3' stroke-width='4.5' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <style>
+      :root { color-scheme: dark; --bg:#0a1322; --raised:#0f1b2e; --line:#2b3d59; --text:#dbe5f1; --muted:#8c9db6; --accent:#5ad7e3; --warn:#e4b552; }
+      * { box-sizing: border-box; }
+      body { margin:0; min-height:100vh; display:grid; place-items:center; padding:2rem;
+        background:var(--bg); color:var(--text);
+        font: 17px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+      main { width:min(560px,100%); }
+      .log { margin:0 0 2rem; padding:1rem 1.25rem; background:var(--raised); border:1px solid var(--line); border-radius:10px;
+        font: 13px/1.7 ui-monospace, Menlo, Consolas, monospace; color:var(--muted); overflow-x:auto; }
+      .log b { color:var(--warn); font-weight:500; }
+      .log span { color:var(--text); }
+      h1 { font-size:2.4rem; line-height:1.1; letter-spacing:-0.03em; margin:0 0 .75rem; font-weight:600; }
+      p { margin:0 0 1.5rem; color:var(--muted); }
+      a.btn { display:inline-flex; align-items:center; min-height:2.75rem; padding:0 1.5rem; border-radius:6px;
+        background:var(--accent); color:#032029; font-weight:500; text-decoration:none; }
+      a.btn:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+      .alt { margin-left:1rem; color:var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <pre class="log" aria-hidden="true">GET <span id="path">/this-page</span> HTTP/1.1
+Host: <span id="host">this site</span>
+
+HTTP/1.1 <b>404 Not Found</b></pre>
+      <h1>This page doesn't exist</h1>
+      <p>The link may be old, or the address may have a typo. Everything on this site lives on the home page.</p>
+      <a class="btn" href="/">Go to the home page</a>
+      <a class="alt" href="/#projects">See projects</a>
+    </main>
+    <script>
+      // Show the requested path in the log (as text, never as HTML).
+      document.getElementById("path").textContent = location.pathname;
+      document.getElementById("host").textContent = location.host || "localhost";
+    </script>
+  </body>
+</html>
